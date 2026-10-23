@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Off unless Settings.Global tvhome_button_map or tvhome_button_log is set.
+  flagRequestFilterKeyEvents is how Button Mapper sees remote keys. This
+  service does not read window content.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/button_guard_description"
+    android:accessibilityEventTypes="typeWindowStateChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagRequestFilterKeyEvents"
+    android:canRequestFilterKeyEvents="true"
+    android:notificationTimeout="100"
+    android:settingsActivity="com.gathin.tvhome.MainActivity" />

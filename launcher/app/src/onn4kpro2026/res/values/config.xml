@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 2026 onn 4K Pro has 3 GB. Ambient glow and the full glass highlight fit. -->
+    <integer name="memory_profile">1</integer>
+</resources>

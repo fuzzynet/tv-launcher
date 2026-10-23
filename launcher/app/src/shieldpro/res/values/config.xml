@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Shield TV Pro 2019 has 3 GB. -->
+    <integer name="memory_profile">1</integer>
+</resources>

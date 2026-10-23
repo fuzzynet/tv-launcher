@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 2026 onn 4K stick has 2 GB. Same light profile as the other 2 GB Google TV boxes.
+         Realtek RTD1325 does not change the UI tier. The SoC is not Amlogic. -->
+    <integer name="memory_profile">0</integer>
+</resources>

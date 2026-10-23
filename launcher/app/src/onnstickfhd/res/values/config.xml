@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Optional 2023 Full HD stick. About 1.5 GB: light profile plus no glass highlight. -->
+    <integer name="memory_profile">0</integer>
+    <bool name="minimal_ui">true</bool>
+</resources>

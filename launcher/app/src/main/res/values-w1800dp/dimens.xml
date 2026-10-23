@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 4K framebuffer at a 1080p-class density (width around 1800dp or more). -->
+<resources>
+    <dimen name="tile_width">360dp</dimen>
+    <dimen name="tile_height">202dp</dimen>
+    <dimen name="tile_icon">96dp</dimen>
+    <dimen name="tile_radius">32dp</dimen>
+    <dimen name="item_pad_v">16dp</dimen>
+    <dimen name="name_margin_top">216dp</dimen>
+    <dimen name="name_height">44dp</dimen>
+    <dimen name="name_text">28sp</dimen>
+    <dimen name="label_text">26sp</dimen>
+    <dimen name="dock_offset_top">12dp</dimen>
+    <dimen name="dock_offset_bottom">24dp</dimen>
+    <dimen name="dock_row_height">328dp</dimen>
+    <dimen name="dock_screen_gap">60dp</dimen>
+    <dimen name="dock_band_pad">28dp</dimen>
+    <dimen name="dock_band_radius">52dp</dimen>
+    <dimen name="hero_text">96sp</dimen>
+    <dimen name="hero_margin_start">136dp</dimen>
+    <dimen name="clock_text">104sp</dimen>
+    <dimen name="greeting_text">24sp</dimen>
+    <dimen name="date_text">28sp</dimen>
+    <dimen name="ampm_text">30sp</dimen>
+    <dimen name="screen_pad_h">112dp</dimen>
+    <dimen name="screen_pad_top">52dp</dimen>
+    <dimen name="pill_height">64dp</dimen>
+    <dimen name="pill_text">24sp</dimen>
+    <dimen name="pill_icon">30dp</dimen>
+    <dimen name="glass_inset">12dp</dimen>
+    <dimen name="quick_menu_width">460dp</dimen>
+    <dimen name="tile_menu_width">560dp</dimen>
+    <dimen name="input_menu_width">300dp</dimen>
+    <dimen name="support_footer_gap">32dp</dimen>
+    <!-- Doubled with the other 4K sizes. 96dp is more than 5% of a 1080dp-tall framebuffer. -->
+    <dimen name="overscan_safe_bottom">96dp</dimen>
+</resources>

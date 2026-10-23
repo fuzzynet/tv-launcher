@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 2019 Shield TV tube has 2 GB. Keep the light profile. -->
+    <integer name="memory_profile">0</integer>
+</resources>

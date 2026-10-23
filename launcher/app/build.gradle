@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.gathin.tvhome'
+    compileSdk 35
+
+    defaultConfig {
+        // Fixed identity for this fork. Upstream can override the id with -PlauncherApplicationId
+        // for a Xiaomi HOME allowlist; that override is left out so every flavor stays this package.
+        applicationId 'com.gathin.tvhome'
+        minSdk 26
+        targetSdk 34
+        versionCode 15
+        versionName '2.13-onn'
+    }
+
+    // One installed package. The flavor only changes res/values (dock, memory profile).
+    // The Tailscale tile hides after it connects on every flavor. Pick one with
+    // DEVICE=... launcher/build-and-install.sh, or ./gradlew assembleOnn4k2023Debug.
+    flavorDimensions += "device"
+    productFlavors {
+        onn4k2021 { dimension "device" }       // 2021 onn 4K, 2 GB, Android TV
+        onn4k2023 { dimension "device" }       // 2023 onn 4K box, 2 GB, Google TV 12 or 14
+        onn4kpro { dimension "device" }        // 2024 onn 4K Pro, 3 GB, Google TV
+        onn4kpro2026 { dimension "device" }    // 2026 onn 4K Pro, 3 GB, Google TV
+        onn4kplus { dimension "device" }       // 2025 onn 4K Plus, 2 GB, Google TV
+        onn4kstick2026 { dimension "device" }  // 2026 onn 4K stick, 2 GB, Realtek, Google TV
+        onnstickfhd { dimension "device" }     // 2023 onn Full HD stick, ~1.5 GB, optional
+        shieldpro { dimension "device" }       // 2019 Shield TV Pro, 3 GB, Android TV
+        shield { dimension "device" }          // 2015 / 2017 Shield TV, 3 GB, Android TV
+        shieldtube { dimension "device" }      // 2019 Shield TV (tube), 2 GB, Android TV
+    }
+
+    sourceSets {
+        shield {
+            res.srcDir 'src/shieldShared/res'
+        }
+        shieldpro {
+            res.srcDir 'src/shieldShared/res'
+        }
+        shieldtube {
+            res.srcDir 'src/shieldShared/res'
+        }
+    }
+
+    buildTypes {
+        release {
+            // R8 strips unused AndroidX. Class names stay (proguard-rules.pro) so a screenshot of a
+            // stack is still readable. Sideloaded over ADB: sign with the debug key so this installs
+            // over a debug build of the same package.
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    packagingOptions {
+        resources {
+            // Kotlin metadata pulled in by AndroidX's dependencies. This launcher is plain Java and never reads it;
+            // leaving it out saves about 14 KB of every install.
+            excludes += ['kotlin/**', 'META-INF/*.version', 'META-INF/*.kotlin_module', 'DebugProbesKt.bin']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    // Real org.json for local unit tests (android.jar only has stubs).
+    testImplementation 'org.json:json:20260814'
+}

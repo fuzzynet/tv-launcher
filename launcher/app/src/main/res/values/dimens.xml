@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sizes for a 1080p Android TV UI (about 960–1440dp wide). values-w1800dp doubles them
+     for a 4K framebuffer that still reports a 1080p density. -->
+<resources>
+    <dimen name="tile_width">180dp</dimen>
+    <dimen name="tile_height">101dp</dimen>
+    <dimen name="tile_icon">48dp</dimen>
+    <dimen name="tile_radius">16dp</dimen>
+    <dimen name="item_pad_v">8dp</dimen>
+    <dimen name="name_margin_top">108dp</dimen>
+    <dimen name="name_height">22dp</dimen>
+    <dimen name="name_text">14sp</dimen>
+    <dimen name="label_text">13sp</dimen>
+    <dimen name="dock_offset_top">6dp</dimen>
+    <dimen name="dock_offset_bottom">12dp</dimen>
+    <dimen name="dock_row_height">164dp</dimen>
+    <dimen name="dock_screen_gap">30dp</dimen>
+    <dimen name="dock_band_pad">14dp</dimen>
+    <dimen name="dock_band_radius">26dp</dimen>
+    <dimen name="hero_text">48sp</dimen>
+    <dimen name="hero_margin_start">68dp</dimen>
+    <dimen name="clock_text">52sp</dimen>
+    <dimen name="greeting_text">12sp</dimen>
+    <dimen name="date_text">14sp</dimen>
+    <dimen name="ampm_text">15sp</dimen>
+    <dimen name="screen_pad_h">56dp</dimen>
+    <dimen name="screen_pad_top">26dp</dimen>
+    <dimen name="pill_height">32dp</dimen>
+    <dimen name="pill_text">12sp</dimen>
+    <dimen name="pill_icon">15dp</dimen>
+    <dimen name="glass_inset">6dp</dimen>
+    <dimen name="quick_menu_width">230dp</dimen>
+    <dimen name="tile_menu_width">280dp</dimen>
+    <dimen name="input_menu_width">150dp</dimen>
+    <!-- Gap between the last app row and the support pill. -->
+    <dimen name="support_footer_gap">16dp</dimen>
+    <!-- TV overscan. 48dp is more than 5% of a 1080p UI (540dp at xhdpi, 720dp at 240dpi),
+         so the support pill stays fully on screen on the onn 4K Pro at 1080p. -->
+    <dimen name="overscan_safe_bottom">48dp</dimen>
+</resources>

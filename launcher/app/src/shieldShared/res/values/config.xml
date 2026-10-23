@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Shield ships Prime Video as com.amazon.amazonvideo.livingroom.nvidia. -->
+    <string-array name="dock_apps">
+        <item>com.netflix.ninja</item>
+        <item>com.amazon.amazonvideo.livingroom.nvidia</item>
+        <item>com.google.android.youtube.tv</item>
+        <item>com.disney.disneyplus</item>
+    </string-array>
+</resources>
